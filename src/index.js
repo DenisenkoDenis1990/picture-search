@@ -38,7 +38,7 @@ function addGalleryMarkUp(pictures) {
   let galleryMarkUp = pictures
     .map(picture => {
       return `<div class="photo-card">
-  <a class="gallery-item" href ="${picture.largeImageURL}"><img src="${picture.webformatURL}" alt="${picture.tags}" loading="lazy" /></a>
+  <a class="gallery-item" href ="${picture.largeImageURL}"><img src="${picture.webformatURL}" alt="${picture.tags}" loading="lazy" width = 300px height = 300px/></a>
   <div class="info">
     <p class="info-item">
       <b>Likes</b>
