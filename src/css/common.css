@@ -28,18 +28,28 @@ body {
 }
 .page-header {
   background-color: rgb(84, 36, 214);
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .search-form {
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  padding: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
-input[type='text'] {
-  height: 23px;
+.submit-button {
+  padding: 5px;
+  border-width: 0px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
+
 .conteiner {
   width: 1200px;
   margin-right: auto;
@@ -51,6 +61,8 @@ input[type='text'] {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .photo-card {
@@ -80,5 +92,8 @@ input[type='text'] {
   margin-right: auto;
   margin-left: auto;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-width: 1px;
+  opacity: 0;
 }

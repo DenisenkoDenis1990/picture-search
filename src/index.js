@@ -24,7 +24,7 @@ function onClick() {
       Notify.failure(
         "We're sorry, but you've reached the end of search results."
       );
-      refs.loadMoreButton.setAttribute('hidden', 'hidden');
+      refs.loadMoreButton.style.opacity = 0;
     }
     addGalleryMarkUp(response.data.hits);
   });
@@ -41,10 +41,16 @@ function OnSearch(e) {
         'Sorry, there are no images matching your search query. Please try again.'
       );
     }
+    if (response.data.hits.length !== 0 && response.data.hits.length >= 40) {
+      refs.loadMoreButton.style.opacity = 1;
+    }
+    if (response.data.hits.length !== 0) {
+      Notify.success(`Hooray! We found ${response.data.totalHits} images.`);
+    }
+
     addGalleryMarkUp(response.data.hits);
-    Notify.success(`Hooray! We found ${response.data.totalHits} images.`);
-    refs.loadMoreButton.removeAttribute('hidden');
   });
+  refs.loadMoreButton.style.opacity = 0;
 }
 
 function addGalleryMarkUp(pictures) {
