@@ -82,6 +82,7 @@ function addGalleryMarkUp(pictures) {
 
   refs.gallery.insertAdjacentHTML('beforeend', galleryMarkUp);
   let gallery = new SimpleLightbox('.gallery a');
+  gallery.refresh();
   if (imageServiceApi.page != 1) {
     const { height: cardHeight } = document
       .querySelector('.gallery')
